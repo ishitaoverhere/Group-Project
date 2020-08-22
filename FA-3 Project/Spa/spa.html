@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Spa</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+        <!-- Bootstrap -->
+        <!-- CSS only -->
+        <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- ----------------------------------- -->
+        
+    <link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  #content{
+    background-color: black;
+  }
+#header{
+    background-color: black;
+    color:white;
+    height:100px;
+    text-align: center;
+    position:absolute;
+    top:0px;
+    width:100%;
+  }
+  #photos{
+    position: absolute;
+    top:100px;
+    background-color: grey;
+    color: white;
+    width:30%;
+    height:1300px;
+    text-align: center;
+  }
+  #info{
+    position: absolute;
+    top:100px;
+    background-color: white;
+    margin-left: 30%;
+    width:69%;
+    text-align: center;
+    height:400px;
+  }
+  table {
+    height:10%;
+    text-align: left;
+  }
+  #menu{
+    position: absolute;
+    top:500px;
+    height:900px;
+    width:69%;
+    background-color: black;
+    margin-left: 30%;
+    text-align: center;
+    color: white;
+  }
+  #vl{
+    position: absolute;
+    top:170px;
+    border-left: 2px solid white;
+    margin-left: -3px;
+    height: 600px;
+    left:50%;
+  }
+  #menu_left{
+    position: absolute;
+    top:100px;
+    left:5%;
+    text-align: left;
+  }
+  #menu_right{
+    position: absolute;
+    top:100px;
+    left: 50%;
+    text-align: left;
+  }
+  #heading {
+    letter-spacing: 2px;
+  }
+  #sub {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 6px;
+  }
+  .header {
+  padding: 10px 16px;
+  background: black;
+  color: black;
+  z-index: 11;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+#logo {
+  background-color: black;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 480px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 13;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+hr{
+  border:1px solid white;
+  width:50%;
+}
+#td1{
+  padding:0px 130px 0px 130px;
+}
+#td2{
+  padding:0px 200px 0px 200px;
+}
+#hr1{
+ border-color:grey;
+  width:100%;
+}
+#no1{ 
+  position: absolute;
+  top:850px;
+  left:265px;
+  width:300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#no2{ 
+  position: absolute;
+  top:850px;
+  left:610px;
+  width:300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  
+}
+#no3{ 
+  position: absolute;
+  top:850px;
+  left:950px;
+  width:300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  
+}
+#no4{ 
+  position: absolute;
+  top:1010px;
+  left:265px;
+  width:300px;
+  
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#no5{ 
+  position: absolute;
+  top:1010px;
+  left:610px;
+  width:300px;
+  float:right;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#h21{
+   position: absolute;
+   left: 610px;
+   top: 1160px;
+    font-family: 'Lemonada', cursive;
+}
+#h22{
+    position: absolute;
+    left: 580px;
+    top: 1410px;
+    font-family: 'Lemonada', cursive;
+}
+#h31{
+  font-family: 'Lemonada', cursive;
+}
+#no6{ 
+  position: absolute;
+  top:1220px;
+  left:265px;
+  width:300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#no7{ 
+  position: absolute;
+  top:1220px;
+  left:610px;
+  width:300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  
+}
+#no8{ 
+  position: absolute;
+  top:1220px;
+  left:950px;
+  width:300px;
+  
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#no9{ 
+  position: absolute;
+  top:1470px;
+  left:265px;
+  width:300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#no10{ 
+  position: absolute;
+  top:1470px;
+  left:610px;
+  width:300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  
+}
+#no11{ 
+  position: absolute;
+  top:1470px;
+  left:950px;
+  width:300px;
+  
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+h5{
+  text-align: center;
+  font-family: 'Sriracha', cursive;
+}
+</style>
+        
+    </head>
+<body>
+
+<div id="container">
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../Index/project-index.html">Overview</a>
+  <a href="../Accommodation/acc-index.html">Accommodations</a>
+  <a href="../Pool/pool.html">Activities</a>
+  <a href="../Restaurants & Bars/index-res.html">Restaurants & Bar</a>
+  <a href="../Spa/spa.html">Spa</a>
+  <a href="../Club/club.html">The Club</a>
+  <a href="../Bookings/booking-final.html">Bookings</a>
+</div>
+<div class="header" id="myHeader">
+  <button class="openbtn" onclick="openNav()" id="logo"><img src="https://pbs.twimg.com/profile_images/750426268521205760/oaVecibt_400x400.jpg" width="55 px" height="50 px"></button>
+  <!--<h1 style="text-align: center; color: white; width: 500px;">ZAYKA</h1>-->
+</div>
+</div>
+
+<section id="projects">
+            <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                        <li data-target="#projectsCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#projectsCarousel" data-slide-to="1"></li>
+                        <li data-target="#projectsCarousel" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="spa.jpg" width="1400" height="440" class="d-block w-100" alt="...">
+                      <a href="#">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>SPA</h5>
+                          <p>Embrace yourself</p>
+                        </div>
+                      </a>
+                    </div>
+                    
+                   
+                    <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>                
+            </div>                        
+        </section>
+    
+    <script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+
+<div >
+
+<div id="content" >
+  <br><br>
+<h1 style="text-align: center;color:white;">HOURS</h1>
+<hr>
+<center>
+<table style="color:white;">
+  <tr>
+    <td id="td1">SPA RECEPTION AND TREATMENTS</td>
+  
+      <td id="td1">MONDAY – FRIDAY<br>
+11:00 AM – 11:00 PM<br>
+SATURDAY, SUNDAY<br>
+8:00 AM – 11:00 PM<br>
+  </td>
+</tr>
+</table>
+</center>
+<hr>
+<center>
+<table style="color:white;">
+  <tr>
+    <td id="td2">VITALITY LOUNGE</td>
+  
+      <td id="td2">6:00 AM – 10:00 PM
+  </td>
+</tr>
+</table>
+</center>
+<br>
+  </div>
+
+
+<div id="services">
+  <br><br>
+  <h2 id="h31" style="text-align: center">SPA SERVICES</h2>
+<br>
+
+  <div id="no1"> 
+    <hr id="hr1">
+    <h5>SIGNATURE EXPERIENCES</h5>
+    <p>Relax and recover with a wide variety of healing massages.</p>
+
+  </div>
+
+<div id="no2"> 
+    <hr id="hr1">
+    <h5>BODY THERAPY</h5>
+    <p>Restore vitality inside and out with our selection of scrubs and body work.</p>
+  </div>
+
+  <div id="no3"> 
+    <hr id="hr1">
+    <h5>FACIAL TREATMENTS</h5>
+    <p>Advanced treatments lend you a more youthful and flawless complexion.</p>
+  </div>
+
+  <div id="no4"> 
+    <hr id="hr1">
+    <h5>COUPLE’S RETREAT</h5>
+    <p>Immersive treatments bring you and your partner closer.</p>
+  </div>
+  
+  <div id="no5"> 
+    <hr id="hr1">
+    <h5>SPA BY THE POOL</h5>
+    <p>Embrace your health by the poolside with a selection of wellness treatments.
+
+</p>
+  </div>
+</div>
+<div>
+  <h2 id ="h21" style="text-align: center;">SALON SERVICES</h2>
+  <div id="no6"> 
+    <hr id="hr1">
+    <h5>HAIR STYLING & HAIR CARE</h5>
+    <p>Get a custom cut, style and colour or a host of nourishing treatments at the Dessange Paris salon.</p>
+</div>
+<div id="no7"> 
+    <hr id="hr1">
+    <h5>MAQUILLAGE</h5>
+    <p>Spruce yourself up for special occasions with professional make-up services by skilled beauty specialists.</p>
+</div>
+
+<div id="no8"> 
+    <hr id="hr1">
+    <h5>BEAUTY TREATMENTS</h5>
+    <p>From skin care and nail care to depilatory services, give yourself a much-needed break while skilled estheticians have you looking and feeling your best.</p>
+</div></div>
+<h2 id="h22" style="text-align: center">WELLNESS SERVICES</h2>
+<div id="no9"> 
+    <hr id="hr1">
+    <h5>YOGA</h5>
+    <p>For practitioners of all levels, we illuminate manifold paths to enlightenment.</p>
+</div>
+<div id="no10"> 
+    <hr id="hr1">
+    <h5>PERSONAL FITNESS</h5>
+    <p>Our health professionals help you achieve your fitness goals.</p>
+</div>
+<div id="no11"> 
+    <hr id="hr1">
+    <h5>AYURVEDA</h5>
+    <p>Southern India’s traditional healing methods transform your holistic health.</p>
+</div>
+</div>
+
+
+    </body>
+    </html>

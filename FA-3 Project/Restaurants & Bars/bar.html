@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shah Jahan Bar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+<style>
+table#table1 {
+    width:70%; 
+    margin-left:2%; 
+    margin-right:28%;
+  }
+	body {
+		background-color: black;
+	}
+	#header{
+		background-color: black;
+		color:white;
+		height:100px;
+		text-align: center;
+		position:absolute;
+		top:0px;
+		width:100%;
+	}
+	#photos{
+		position: absolute;
+		top:100px;
+		background-color: white;
+		color: white;
+		width:30%;
+		height:1350px;
+		text-align: center;
+	}
+	#info{
+		position: absolute;
+		top:100px;
+		background-color: white;
+		margin-left: 30%;
+		width:69%;
+		text-align: center;
+		height:400px;
+	}
+	table {
+		height:10%;
+		text-align: left;
+	}
+	#menu{
+		position: absolute;
+		top:500px;
+		height:900px;
+		width:69%;
+		background-color: black;
+		margin-left: 30%;
+		text-align: center;
+		color: white;
+	}
+	#vl{
+		position: absolute;
+		top:140px;
+		border-left: 2px solid white;
+		margin-left: -2px;
+		height: 630px;
+		left:50%;
+	}
+	#menu_left{
+		position: absolute;
+		top:50px;
+		left:5%;
+		text-align: left;
+	}
+	#menu_right{
+		position: absolute;
+		top:50px;
+		left: 50%;
+		text-align: left;
+	}
+	#heading {
+		letter-spacing: 2px;
+	}
+	#sub {
+		font-family: 'Raleway', sans-serif;
+		letter-spacing: 6px;
+	}
+	.header {
+  padding: 10px 16px;
+  background: black;
+  color: black;
+  z-index: 11;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+#logo {
+  background-color: black;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 350px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 13;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+
+		<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../Index/project-index.html">Overview</a>
+  <a href="../Accommodation/acc-index.html">Accommodations</a>
+  <a href="../Pool/pool.html">Activities</a>
+  <a href="../Restaurants & Bars/index-res.html">Restaurants & Bar</a>
+  <a href="../Spa/spa.html">Spa</a>
+  <a href="../Club/club.html">The Club</a>
+  <a href="../Bookings/booking-final.html">Bookings</a>
+</div>
+
+
+  <div class="header" id="myHeader">
+  <button class="openbtn" onclick="openNav()" id="logo"><img src="https://pbs.twimg.com/profile_images/750426268521205760/oaVecibt_400x400.jpg" width="55 px" height="50 px"></button>
+  <!--<h1 style="text-align: center; color: white; width: 500px;">ZAYKA</h1>-->
+</div>
+
+
+
+		<div id="photos">
+			<table id="table1" cellpadding="40px">
+	<!---Image Gallery--->
+	
+    <tr>  
+<td ><img src ="shahjahanbar1.jpg" alt="" height=250 width=350></td>	         <!---SHAHJAHANBAR1--->
+        
+    </tr>
+	<td><img src="shahjahanbar2.png" alt=""  height=250 width=350></img></td> <!---SHAHJAHANBAR2--->
+    <tr>
+        <td ><img src ="shahjahanbar3.jfif" alt="" height=250 width=350></td> <!---SHAHJAHANBAR3--->
+    </tr>
+	
+    <tr>
+        <td><img src ="shahjahanbar4.jpg" alt="" height=250 width=350></td>   <!---SHAHJAHANBAR4--->  
+    </tr>
+  
+   
+</table>
+		</div>
+
+
+		<div id="info">
+			<h1 id="sub">SHAH JAHAN BAR</h1>
+			<hr width="7%">
+			<table cellspacing="20" width="90%">
+				<tr><td><div id="heading"><i class="fas fa-layer-group"></i>&nbsp;&nbsp;&nbsp;&nbsp;WHERE ARE WE?</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53nd floor</td>
+					<td><div id="heading"><i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;&nbsp;TIMINGS</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7:30 p.m. to 1 a.m.</td>
+				</tr>
+				<tr><td><div id="heading"><i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp;SEATING ARRANGEMENTS</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upto 10 seats can be arranged at a time<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and special arrangements on request</td>
+					<td><div id="heading"><i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;&nbsp;VIEW</div>
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Arabian Sea</td>
+				</tr>
+				<tr><td><div id="heading"><i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp;&nbsp;SPECIALITIES</div>
+					<br></td>
+					<td><div id="heading"><i class="far fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;RATINGS</div>
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> &nbsp;&nbsp;4.80</td>
+				</tr>
+			</table>
+		</div>
+
+
+
+		<div id="menu">
+			<h1 id="sub"></h1>
+			
+			<div id="menu_left">
+				<ol>
+					<div id="heading">WINE LIST<br><br><li>CHAMPAGNE</div><br><p id="cont">Dom Perignon Champagne &nbsp; INR 15000<br>Moet Et Chandon &nbsp; INR 7500</p></li>
+					<li><div id="heading">SPARKLING WINE(IMPORTED)</div><br><p id="cont">Chardonnay Pinot Noir &nbsp; INR 5500</p></li>
+					<li><div id="heading">WHITE WINE(IMPORTED)</div><br><p id="cont">Chablis &nbsp; INR 4500<br>Jacob's Creek Shiraz Cabernet &nbsp; INR 3500</p></li>
+					<li><div id="heading">WINE BY GLASS</div><br><p id="cont">Imported &nbsp; INR 600<br>Domestic INR 500</p></li>
+				
+			</ol>
+			<ol>
+					<div id="heading"><br><br>INTERNATIONAL FAVOURITES (30 ML)<br><br></div><p id="cont"><li>Pernod &nbsp; INR 400</li></p>
+					<li><p id="cont">Sherry &nbsp; INR 400</p></li>
+					<li><p id="cont">Campari &nbsp; INR 400</p></li>
+					<li><p id="cont">Martini &nbsp; INR 400</p></li>
+					<li><p id="cont">Tequila (Premium/Regular) &nbsp; INR 450/400</p></li>
+					<li><p id="cont">Smirnoff (Black) &nbsp; INR 400</p></li>
+					<li><p id="cont">Grey Goose Vodka &nbsp; INR 500</p></li>
+				</ol>
+			</div>
+
+
+			<div id="vl">
+			</div>
+
+
+			<div id="menu_right">
+				<ol>
+					<div id="heading">BEER</div><br><li><p id="cont">Heinken &nbsp; INR 350</p></li>
+					<li><p id="cont">King Fisher &nbsp; INR 375</p></li>
+					<li><p id="cont">Royal Challenge &nbsp; INR 375</p></li>
+					<li><p id="cont">Foster's &nbsp; INR 375</p></li>
+					<li><p id="cont">Carlsberg &nbsp; INR 425</p></li>
+					<li><p id="cont">Budwiser &nbsp; INR 350</p></li>
+				</ol>
+				<ol>
+					<div id="heading"><br>IMFL SELECTION</div><br><li><p id="cont">Teacher's 50/ Black Dog Triple Gold &nbsp; INR 450</p></li>
+					<li><p id="cont">Black Dog Centenary/ 100 Pipers/ Passport/<br> Black & White/ Old Smuggler &nbsp; INR 375</p></li>
+				</ol>
+				<ol>
+					<div id="heading"><br>DOMESTIC SELECTION<br>WHISKEY REGULAR</div><br><li><p id="cont">Royal Challenge/ Blender’s Pride/ Signature/ Antiquity Blue &nbsp; INR 325</p></li>
+					<li><p id="cont">Dark Rum &nbsp; INR 325</p></li>
+					<li><p id="cont">Gin &nbsp; INR 325</p></li>
+					<li><p id="cont">Vodka &nbsp; INR 325</p></li>
+					<li><p id="cont">Brandy &nbsp; INR 325</p></li>
+					<li><p id="cont">Bacardi &nbsp; INR 325</p></li>
+					<li><p id="cont">Bacardi Breezer &nbsp; INR 325</p></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+</body>
+</html>

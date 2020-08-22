@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>KAMAL SAROVAR</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- Bootstrap -->
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- ----------------------------------- -->
+        
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+<style>
+li{
+text-align:left;}
+	#header{
+		background-color: black;
+		color:white;
+		height:100px;
+		text-align: center;
+		position:absolute;
+		top:0px;
+		width:100%;
+	}
+	#heading {
+		letter-spacing: 2px;
+	}
+	#sub {
+		font-family: 'Raleway', sans-serif;
+		letter-spacing: 6px;
+	}
+	.header {
+  padding: 10px 16px;
+  background: black;
+  color: black;
+  z-index: 11;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+#logo {
+  background-color: black;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 420px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 13;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+	#images{
+		width:100%;
+		height:440px;
+		border:1px solid black ;
+		text-align: center;
+	}
+	#info{
+		width:100%;
+		border:1px solid white;
+		text-align: center;
+	}
+	#food_menu{
+
+		margin-left: 50px;
+		border:1px solid black ;
+		text-align: center;
+		height:520px;
+		color: white;
+		background-color: black;
+		border-radius: 20px;
+		font-family: 'Cinzel', serif;
+	}
+	#drink_menu{
+
+		margin-left: 20px;
+		border:1px solid black ;
+		text-align: center;
+		height:520px;
+		color: white;
+		background-color: black;
+		border-radius: 20px;
+		font-family: 'Cinzel', serif;
+	}
+	.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  
+  width:45%;
+}
+
+#kamal {
+	font-family: 'Bilbo', cursive;
+	font-size: 68px;
+	font-weight: 400;
+}
+#p1 {
+	font-family: "Courier New", Courier, monospace;
+	letter-spacing: 2px;
+}
+#p2 {
+	font-family: 'Philosopher', sans-serif;
+}
+#maindiv {
+	background-color: black;
+	color: white;
+	width: 90%;
+	height: 30px;
+	margin-left: 60px;
+	text-align: center;
+	font-family: 'Alata', sans-serif;
+	letter-spacing: 2px;
+}
+#menuhead {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+	font-size: 30px;
+}
+#imghead {
+	letter-spacing: 2px;
+	font-family: 'Philosopher', sans-serif;
+}
+#imgsubhead {
+	font-family: "Courier New", Courier, monospace;
+	color: white;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+	<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../Index/project-index.html">Overview</a>
+  <a href="../Accommodation/acc-index.html">Accommodations</a>
+  <a href="../Pool/pool.html">Activities</a>
+  <a href="../Restaurants & Bars/index-res.html">Restaurants & Bar</a>
+  <a href="../Spa/spa.html">Spa</a>
+  <a href="../Club/club.html">The Club</a>
+  <a href="../Bookings/booking-final.html">Bookings</a>
+	</div>
+	<div class="header" id="myHeader">
+  <button class="openbtn" onclick="openNav()" id="logo"><img src="https://pbs.twimg.com/profile_images/750426268521205760/oaVecibt_400x400.jpg" width="55 px" height="50 px"></button>
+</div>
+</div>
+<section id="projects">
+            <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                        
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="pool.jpg" width="1400" height="440" class="d-block w-100" alt="...">
+					  <!--pool image-->
+                      <a href="#">
+                        <div class="carousel-caption d-none d-md-block">
+						
+                          <h5 id="imghead">Kamal Sarovar</h5>
+                          <p id="imgsubhead"><i>Luxury Pool with extraordinary services</i></p>
+                        </div>
+                      </a>
+                    </div>
+                                     
+        </section>
+
+		
+
+
+		<div id="info">
+			<h1 id="kamal">Kamal Sarovar</h1>
+			<p id="p1"><i><b>Luxury Pool</b></i></p>
+			<p id="p2">The ideal spot to enjoy fresh juices and light meals - the perfect complement to a day by the pool, or simply to take a relaxing break.</p>
+	
+		<p id="p2">Enjoy your time by the 18 meter long swimming pool reflecting azure blue water and spectacular sunsets along with an exclusive pool bar.<br> The poolside  is ideal for relaxation, de stress, and a fitness regime. Attached is a baby pool for kids and families to keep their little ones engaged.
+<br>
+<br>
+The Pool Bar offers the signature cocktails along with a continental menu served at the sun deck.
+<br><br>
+Summer Hours: &nbsp;&nbsp;7:30AM to 8.30PM
+<br>
+Winter Hours: &nbsp;&nbsp;8.30AM to 6.30 PM</p>
+		</div>
+		<div id="maindiv">POOL SIDE MENU AND BAR</div><br>
+		<div id="row">
+			<div class="column" id="food_menu">
+				<p id="menuhead">FOOD MENU</p>
+				<ul>
+				
+				<li><b>Burgers & Mains</b></li>
+				      <ul style="list-style-type: none;">
+				      <li>Baked Salmon &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1450.00</small></li>
+				      <li>Chicken Steak &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1575.00</small></li>
+				      <li>Cheese Burger &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1325.00</small></li>
+				      <li>Fried chicken Waffle &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1450.00</small></li>
+				      <li>Egg Ploding Burger &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1235.00</small></li>
+				      </ul>
+				<li><b>Sides</b></li>
+				       <ul style="list-style-type: none;">
+					   <li>Chicken Nuggets &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1225.00</small></li>
+					   <li>Mushroom Soup &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1450.00</small></li>
+					   <li>Party Basket &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1000.00</small></li>
+					   <li>Cheese Fries &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1020.00</small></li>
+					   <li>French Fries &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1000.00</small></li>
+					   </ul>
+			    <li><b>Pasta</b></li>
+				        <ul style="list-style-type: none;">
+						<li>Tom Yum Seafood Pasta &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1330.00</small></li>
+						<li>Thai Basil Chicken Pasta &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1080.00</small></li>
+						<li>Mushroom Aglio Olio &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1250.00</small></li>
+						<li>Chicken Curry Pasta &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1225.00</small></li>
+				</ul>
+			</div>
+			
+			<div class="column" id="drink_menu">
+				<p id="menuhead">DRINK MENU</p>
+				<ul>
+				<li><b>Rocks</b></li>
+				<ul style="list-style-type: none;">
+				<li>Strawberry Jalapeño Mint Julep &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 755.00</small></li>
+				<li>Classic Mai Tai &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 775.00</small></li>
+				<li>Frozen Pimm's Cup &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1020.00</small></li>
+				<li>Rosemary Gin Fizz &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1035.00</small></li>
+				<li>Rainbow Sangria &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1150.00</small></li>
+				<li>Mermaid Lemonade &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 885.00</small></li>
+				<li>Summer Crush Mimosas &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1235.00</small></li>
+				</ul>
+				<li><b>Non Alcoholic</b></li>
+				<ul style="list-style-type: none;">
+				<li>Shirley Temples &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1020.00</small></li>
+				<li>Arnold Palmer &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1220.00</small></li>
+				<li>Purple Punch &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1050.00</small></li>
+				<li>Lime Zinger &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1175.00</small></li>
+				</ul>
+				<li><b>Sangria</b></li>
+				<ul style="list-style-type: none;">
+				<li>Frozen Sangria Margarita &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 800.00</small></li>
+				<li>Watermelon Sangria &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1230.00</small></li>
+				<li>Mimosa Margaritas &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1250.00</small></li>
+				<li>Piña Colada Sangria &nbsp;&nbsp;&nbsp;&nbsp;<small>INR 1020.00</small></li>
+				</ul>
+				</ul>
+			</div>
+		</div>
+		<br>
+
+
+
+	</div>
+	<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+</body>
+</html>

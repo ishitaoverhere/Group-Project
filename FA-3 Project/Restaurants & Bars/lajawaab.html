@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LAJAWAAB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+<style>
+body{
+background-color:black;}
+	#header{
+		background-color: black;
+		color:white;
+		height:100px;
+		text-align: center;
+		position:absolute;
+		top:0px;
+		width:100%;
+	}
+	#photos{
+		position: absolute;
+		top:100px;
+		background-color: white;
+		color: white;
+		width:30%;
+		height:1340px;
+		text-align: center;
+		
+	}
+	#info{
+		position: absolute;
+		top:100px;
+		background-color: white;
+		margin-left: 30%;
+		width:69%;
+		text-align: center;
+		height:400px;
+	}
+	table {
+		height:10%;
+		text-align: left;
+	}
+	#menu{
+		position: absolute;
+		top:500px;
+		height:900px;
+		width:69%;
+		background-color: black;
+		margin-left: 30%;
+		text-align: center;
+		color: white;
+	}
+	#vl{
+		position: absolute;
+		top:170px;
+		border-left: 2px solid white;
+		margin-left: -3px;
+		height: 600px;
+		left:50%;
+	}
+	#menu_left{
+		position: absolute;
+		top:100px;
+		left:5%;
+		text-align: left;
+	}
+	#menu_right{
+		position: absolute;
+		top:100px;
+		left: 50%;
+		text-align: left;
+	}
+	#heading {
+		letter-spacing: 2px;
+	}
+	#sub {
+		font-family: 'Raleway', sans-serif;
+		letter-spacing: 6px;
+	}
+	.header {
+  padding: 10px 16px;
+  background: black;
+  color: black;
+  z-index: 11;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+#logo {
+  background-color: black;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 350px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 13;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+
+</style>
+</head>
+<body>
+	<div id="container">
+
+		<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../Index/project-index.html">Overview</a>
+  <a href="../Accommodation/acc-index.html">Accommodations</a>
+  <a href="../Pool/pool.html">Activities</a>
+  <a href="../Restaurants & Bars/index-res.html">Restaurants & Bar</a>
+  <a href="../Spa/spa.html">Spa</a>
+  <a href="../Club/club.html">The Club</a>
+  <a href="../Bookings/booking-final.html">Bookings</a>
+</div>
+
+
+  <div class="header" id="myHeader">
+  <button class="openbtn" onclick="openNav()" id="logo"><img src="https://pbs.twimg.com/profile_images/750426268521205760/oaVecibt_400x400.jpg" width="55 px" height="50 px"></button>
+  <!--<h1 style="text-align: center; color: white; width: 500px;">ZAYKA</h1>-->
+</div>
+
+
+
+		<div id="photos">
+			    <table cellpadding="45px">
+	<!---Image Gallery--->
+	
+    <tr>   
+        <td><img src="platter.jpg" alt=""  height=250 width=350></img></td>
+    </tr>
+	
+    <tr>
+        <td ><img src ="hakkanoodles.jfif" alt="" height=250 width=350></td>
+    </tr>
+	
+    <tr>
+        <td><img src ="biryani.jpg" alt="" height=250 width=350></td>
+    </tr>
+    <tr>
+        <td><img src ="pbm.jpg" alt="" height=250 width=350></td>
+    </tr>
+   
+</table>
+		</div>
+
+
+		<div id="info">
+			<h1 id="sub">LAJAWAAB</h1>
+			<hr width="7%">
+			<table cellspacing="20" width="90%">
+				<tr><td><div id="heading"><i class="fas fa-layer-group"></i>&nbsp;&nbsp;&nbsp;&nbsp;WHERE ARE WE?</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;62nd floor</td>
+					<td><div id="heading"><i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;&nbsp;TIMINGS</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 a.m. to 11 p.m.</td>
+				</tr>
+				<tr><td><div id="heading"><i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp;SEATING ARRANGEMENTS</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upto 10 seats can be arranged at a time</td>
+					<td><div id="heading"><i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;&nbsp;VIEW</div>
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;City skyline and Mahalaxmi Racecourse</td>
+				</tr>
+				<tr><td><div id="heading"><i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp;&nbsp;SPECIALITIES</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;International dishes with a Mediterranean twist provide a menu<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for all occasions, including business meetings and social gatherings,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in our lofty, sun-filled dining room.</td>
+					<td><div id="heading"><i class="far fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;RATINGS</div>
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> &nbsp;&nbsp;4.76</td>
+				</tr>
+			</table>
+		</div>
+
+
+
+		<div id="menu">
+			<h1 id="sub">MENU</h1>
+			<hr width="4%">
+			<div id="menu_left">
+				<ol>
+<li>INDIAN(Specials)</li>
+    <dl>
+	<dt>Shiraji Kofta(V)</dt><br>
+    <dd>(A Mughal room delicacy with cottage cheese)<br>INR-600</dd><br>
+   <dt>Subz Roghan-e-Badam(V)</dt><br>
+	<dd>(Combination of seasonal vegetables in spicy gravy<br> with almond garnish)<br>INR-600</dd><br>
+	<dt>Murgh Begum Bahar(N/V)</dt><br>
+	<dd>(Whole Tandoori Chicken stuffed with rich cashew<br> gravy and chicken biryani)<br>INR-1600</dd><br>
+	<dt>Raan-e-Bahar(N/V)</dt><br>
+	<dd>(Leg of tender lamb is marinated in ginger,garlic,<br>Zaffran spices,curd,lime juice & chilli powder)<br>INR-1800</dd>
+	</dl>
+	
+<li>CONTINENTAL(Specials)</li>	
+     <dl>
+	 <dt>Napolitano(V)</dt><br>
+	 <dd>(Sweet,sour and spicy tmato-based sauce)<br>INR-650</dd><br>
+	 <dt>Spinach & Corn Lasagna(V)</dt><br>
+	 <dd>(Freshly baked spinach andcorn lasagna cooked to<br> perfection)<br>INR-600</dd><br>
+	 <dt>Grilled Salmon(N/V)</dt><br>
+	 <dd>(Chunks of Salmon Marinated and grilled to<br> perfection served with avocado Greek salsa & <br> herbed lemon rice)<br>INR-1200</dd><br>
+	 
+	 </dl>
+</ol>
+			</div>
+
+
+			<div id="vl">
+			</div>
+
+
+			<div id="menu_right">
+				<ol start="3">
+<li>INDIAN/ORIENTAL(Specials)</li>	
+     <dl>
+	 <dt>Subz Dum Biryani(V)</dt><br>
+	 <dd>INR-650</dd><br>
+	 <dt>Chilli garlic Hakka Noodles(V)</dt><br>
+	 <dd>INR-600</dd><br>
+	 <dt>Murgh Biryani(N/V)</dt><br>
+	 <dd>INR-600</dd><br>
+	 <dt>Seafood Fried Rice(N/V)</dt><br>
+	 <dd>INR-600</dd><br>
+	 </dl>
+	 
+<li>STARTERS(Specials)</li>	
+     <dl>
+	 <dt>Daawat-e-Zaffran(V)</dt><br>
+	 <dd>(Assorted Tandoori Vegeterian kebab,2pcs paneer tkka,3pcs stuffed mushroom,2pcs subz galawat,1pcs tandoori aloo,2pcs veg seekh)<br>INR-600</dd><br>
+	 <dt>Gulabi Kebab(V)</dt><br>
+	 <dd>INR-600</dd><br>
+	 <dt>Dawaat-e-Mughlai(N/V)</dt><br>
+	 <dd>(Assorted Tandoori Kebab platter-1pcs tangadi kebab,1pcs tandoori chicken,2pcs malai kebab,2pcs fish tikka,1pcs chicken seekh,1pcs mutton seekh)<br>INR-1200</dd><br>
+	 <dt>Tandoori Murgh(N/V)</dt><br>
+	 <dd>INR-550/960(Half/Full)</dd><br>
+	 </dl>
+</ol>
+
+			</div>
+		</div>
+	</div>
+	<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<style>
+body {
+	background-color: black;
+	font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 100vh;
+  font-size: 1.2rem;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+  height: 740px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 110%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+  
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+  
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #222222;
+  width: 150%;
+  
+}
+.form{
+padding : 15px;
+}
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 500;
+  border-width: 2px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 0.8rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+#exclaimer {
+	background-color: #222222;
+	color: #11998e;
+	font-family: 'Poppins', sans-serif;
+	border: none;
+	width:60%;
+}
+#bookingbutt {
+	width: 50%;
+	border-width: 2px;
+  	border-image: linear-gradient(to right, #11998e, #38ef7d);
+  	border-image-slice: 1;
+  	background-color: #222222;
+  	color: #11998e;
+}
+#bookingbutt:active {
+	opacity: 0.1;
+}
+#bookings {
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 4px;
+	color: white;
+	text-align: center;
+	font-size: 65px;
+}
+
+</style>
+</head>
+<body>
+<div class="row">
+	<div class="column" style="background-color: black;">
+		<div id="bookings"><br><p id="mainheading">BOOKINGS</p></div>
+<button class="collapsible">ACCOMMODATIONS</button>
+<div class="content">
+			<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id='name' onfocus="(this.type='date')" class="js-form-control" placeholder="Check Out" onblur="if(!this.value)this.type='text'" required />
+  			<label for="name" class="form__label">Check In</label>
+			</div>
+			
+			<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id='name' onfocus="(this.type='date')" class="js-form-control" placeholder="Check Out" onblur="if(!this.value)this.type='text'" required />
+  			<label for="name" class="form__label">Check Out</label>
+			</div>
+			<!--<input onfocus="(this.type='date')" class="js-form-control" placeholder="Check Out">
+			<input name="date" type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">-->
+			<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id="name listt" list="listt" required />
+  			<label for="name" class="form__label">Select room type</label>
+  			<datalist id="listt">
+ 				<option value="Jodha Mahal"></option>
+ 				<option value="Moti Mahal"></option>
+ 				<option value="Noor Mahal"></option>
+ 				<option value="Taj Mahal"></option>
+ 			</datalist>
+			</div>
+			<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+  			<label for="name" class="form__label">Gift Code(If any?)</label>
+			</div>
+			<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+  			<label for="name" class="form__label">Aadhaar Number</label>
+			</div>
+			<br>
+
+			 <div id="exclaimer"><input type="checkbox" required />Your details and validity will be checked first and then you will be contacted regarding the booking. At the time of your check-in this invoice will be needed along with the special code given to you during the call.</div>
+			 <br>
+			 <button type="button" id="bookingbutt" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">CONFIRM BOOKING</button><div><br></div>
+  			<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Booking Confirmed</h4>
+        </div>
+        <div class="modal-body">
+          <p>Your booking has been confirmed, we'll contact you shortly.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<button class="collapsible">RESTAURANT TABLE BOOKING</button>
+<div class="content">
+		<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id="name listt1" list="listt1" required />
+  			<label for="name" class="form__label">Number of Occupants</label>
+  			<datalist id="listt1">
+  				<option value="1"></option>
+  				<option value="2"></option>
+  				<option value="3"></option>
+  				<option value="4"></option>
+  				<option value="5"></option>
+  				<option value="6"></option>
+  				<option value="7"></option>
+  				<option value="8"></option>
+  				<option value="9"></option>
+  				<option value="10"></option>
+  			</datalist>
+			</div>
+		<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+  			<label for="name" class="form__label">Under Name</label>
+			</div>
+		<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id="name listt2" list="listt2" required />
+  			<label for="name" class="form__label">Place</label>
+  			<datalist id="listt2">
+  				<option value="Zayka"></option>
+  				<option value="Lajawaab"></option>
+  			</datalist>
+			</div>
+		<br>
+
+			 <div id="exclaimer"><input type="checkbox" required />Your details and validity will be checked first and then you will be contacted regarding the booking. At the time of your check-in this invoice will be needed along with the special code given to you during the call.</div>
+			 <br>
+			 <button type="button" id="bookingbutt" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">CONFIRM BOOKING</button><div><br></div>
+					<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Booking Confirmed</h4>
+        </div>
+        <div class="modal-body">
+          <p>Your booking has been confirmed, we'll contact you shortly.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<button class="collapsible">SPA APPOINTMENTS</button>
+<div class="content">
+		<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id='name' onfocus="(this.type='date')" class="js-form-control" placeholder="Check Out" onblur="if(!this.value)this.type='text'" required />
+  			<label for="name" class="form__label">Date</label>
+			</div>
+        <div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id='name' onfocus="(this.type='time')" class="js-form-control" placeholder="Check Out" onblur="if(!this.value)this.type='text'" required />
+  			<label for="name" class="form__label">Check In</label>
+			</div>
+		<div class="form__group field">
+ 			<input type="input" class="form__field" placeholder="Name" name="name" id="name listt3" list="listt3" required />
+  			<label for="name" class="form__label">Treatments</label>
+  			<datalist id="listt3">
+  				<option value="Body Therapy"></option>
+  				<option value="Facial Treatments"></option>
+  				<option value="Spa by the pool"></option>
+  				<option value="Couple's Retreat"></option>
+  				<option value="Hair styling & Hair Care"></option>
+  				<option value="Maquillage"></option>
+  				<option value="Beauty Treatments"></option>
+  				<option value="Yoga"></option>
+  				<option value="Personal Fitness"></option>
+  				<option value="Ayuveda"></option>
+  			</datalist>
+			</div>
+		<br>
+
+			 <div id="exclaimer"><input type="checkbox" required />Your details and validity will be checked first and then you will be contacted regarding the booking. At the time of your check-in this invoice will be needed along with the special code given to you during the call.</div>
+			 <br>
+			 <button type="button" id="bookingbutt" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">CONFIRM BOOKING</button><div><br></div>
+			 		<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Booking Confirmed</h4>
+        </div>
+        <div class="modal-body">
+          <p>Your booking has been confirmed, we'll contact you shortly.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="column" style="background-color: black;">
+<img src="https://foto.hrsstatic.com/fotos/3/2/1280/1280/100/FFFFFF/http%3A%2F%2Ffoto-origin.hrsstatic.com%2Ffoto%2F4%2F0%2F2%2F9%2F%2Fteaser_402983.jpg/scyrOwwOuEbECslaJhA1pA%3D%3D/669%2C1024/6/Four_Seasons_Hotel_Mumbai-Mumbai-Exterior_view-402983.jpg" width="740px" height="700px">
+</div>
+</div>
+
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>

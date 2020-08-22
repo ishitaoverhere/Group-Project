@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ZAFFRAN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+#header{
+    background-color: black;
+    color:white;
+    height:100px;
+    text-align: center;
+    position:absolute;
+    top:0px;
+    width:100%;
+  }
+  #heading {
+    letter-spacing: 2px;
+  }
+  #sub {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 6px;
+  }
+  .header {
+  padding: 10px 16px;
+  background: black;
+  color: black;
+  z-index: 11;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+#logo {
+  background-color: black;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 350px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 13;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+#div1, #div2, #div3{
+text-align:center;
+}
+#container {
+  text-align: left;
+}
+#img1{
+  filter:blur(0px);
+  filter: grayscale(50%);
+}
+
+#address{
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.but {
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.phone {
+  background-color: white; 
+  color: black; 
+  border: 0.3px solid white;
+}
+
+.phone:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.loc {
+  background-color: white; 
+  color: black; 
+  border: 0.3px solid white;
+}
+
+.loc:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.b {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.b1, .b2, .b3, .b4, .b5, .b6, .b7 {
+  background-color: white;
+  color: black;
+  border: 0.5px solid white;
+}
+
+.b1:hover, .b2:hover, .b3:hover, .b4:hover, .b5:hover, .b6:hover, .b7:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.b8, .b9, .b10, .b11 {
+  background-color: white;
+  color: black;
+  border: 0.5px solid grey;
+}
+
+.b8:hover, .b9:hover, .b10:hover, .b11:hover {
+  background-color: white;
+  color: darkgrey;
+}
+.centered{
+  position:absolute;
+  bottom:83%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  /background-color: black;/
+  color:white;
+  font-family: Cassandra ;
+  font-family: 'Dancing Script', cursive;
+  size:100px;
+}
+.moto{
+  position:absolute;
+  bottom:80%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  /background-color: black;/
+  color:white;
+  font-family: Cassandra ;
+  font-family: 'Dancing Script', cursive;
+  
+}
+#img2{
+  width: 75px;
+  height: 80px;
+}
+#mainquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  text-shadow: 2px 2px 2px lightgray;
+}
+#marks {
+  color: lightgrey;
+  font-size: 60px;
+}
+#reviewer {
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../Index/project-index.html">Overview</a>
+  <a href="../Accommodation/acc-index.html">Accommodations</a>
+  <a href="../Pool/pool.html">Activities</a>
+  <a href="../Restaurants & Bars/index-res.html">Restaurants & Bar</a>
+  <a href="../Spa/spa.html">Spa</a>
+  <a href="../Club/club.html">The Club</a>
+  <a href="../Bookings/booking-final.html">Bookings</a>
+  </div>
+  <div class="header" id="myHeader">
+  <button class="openbtn" onclick="openNav()" id="logo"><img src="https://pbs.twimg.com/profile_images/750426268521205760/oaVecibt_400x400.jpg" width="55 px" height="50 px"></button>
+</div>
+</div>
+<div id="div1">
+<img id="img1"src="header-image.jpg" width="1503" height="250">
+
+</div>
+<div id="div2">
+  <img id="img2"src="https://i.pinimg.com/originals/54/ac/a8/54aca8a97eedbbcec06ec55a4f6bfe78.png"/>
+</div>
+<div id="div3">
+<p id="address">114, DR E MOSES Rd, GANDHI NAGAR, UPPER WORLI, WORLI, MUMBAI, MAHARASHTRA 400018</p>
+<p><button class="but phone" style="margin: 20px;"><i class="fas fa-phone-alt"></i> 022 2433 2234</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="but loc" style="margin: 20px;"><a href="https://www.google.com/maps/place/Four+Seasons+Hotel+Mumbai/@18.993371,72.8185542,17z/data=!3m1!4b1!4m8!3m7!1s0x3be7ce8ecb9df2fd:0x4de65ba1148e563a!5m2!4m1!1i2!8m2!3d18.994d72.82074293371!" style="text-decoration: none; color: black;"><i class="fas fa-map-marker-alt"></i> LOCATION</a></button></p>
+<div style="background-color: #222222;">
+
+<br>
+
+  <p style="font-size: 120%;color: white;font-family: 'Alegreya', serif;">Towering above Mumbai’s upscale commercial hub, Zaffran<br> combines chic modern style with an intimate, boutique atmosphere<br> and panoramic sea views. Discover our powerhouse collection of<br> dining, spa and swimming experiences. Let our expert team connect<br> you with local culture, shopping and entertainment. At day’s end,<br> return to our rooftop Peshawari – Bar and Lounge for sunset cocktails<br> and mingling with Mumbai’s elite.</p>
+
+<br>
+
+</div>
+<div>
+<button class="b b1" style="margin: 20px;"><a href="../Pool/pool.html" style="text-decoration: none; color: black;"><i class="fas fa-rainbow"></i> ACTIVITIES</a></button>
+<button class="b b2" style="margin: 20px;"><a href="../Accommodation/acc-index.html" style="text-decoration: none; color: black;"><i class="fas fa-bed"></i> ACCOMMODATIONS</a></button>
+<button class="b b3" style="margin: 20px;"><a href="../Restaurants & Bars/index-res.html" style="text-decoration: none; color: black;"><i class="fas fa-utensils"></i> RESTAURANTS & BAR</a></button> 
+<button class="b b5" style="margin: 20px;"><a href="../Spa/spa.html" style="text-decoration: none; color: black;"><i class="fas fa-spa"></i> SPA</a></button>
+<button class="b b6" style="margin: 20px;"><a href="../Club/club.html" style="text-decoration: none; color: black;"><i class="fas fa-glass-cheers"></i> THE CLUB</a></button>
+
+</div>
+<br><br>
+
+<div id="quote">
+  <span id="marks">&#10077;</span>
+  <p id="mainquote">ZAFFRAN is the place to be to witness Mumbai's<br> nightlife at its vibrant best- best savoured at sunset over<br> our handcrafted cocktails.</p>
+  <span id="marks">&#10078;</span>
+  <p id="reviewer"><b>ADELAIDE QUINN</b>&nbsp; DIRECTOR RESTAURANTS AND BARS</p>
+</div>
+
+
+<br><br>
+<div>
+  <p>SHARE</p>
+  <p><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"  style="color: black;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.instagram.com/?hl=en" style="color: black;"><i class="fab fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://in.pinterest.com/" style="color: black;"><i class="fab fa-pinterest-p"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://twitter.com/login" style="color: black;"><i class="fab fa-twitter"></i></a>
+</div>
+<br><br><br><br>
+<div>
+  <img id="img2"src="https://i.pinimg.com/originals/54/ac/a8/54aca8a97eedbbcec06ec55a4f6bfe78.png"/>
+  <p>ZAFFRAN</p>
+</div>
+<br>
+
+
+<div style="background-color: black;">
+  <br><br>
+<button class="but b8" style="margin: 20px;"><a href="../Image Gallery/imagegallery.html" style="text-decoration: none; color: black;">IMAGE GALLERY</a></button>
+<button class="but b9" style="margin: 20px;"><a href="../Bookings/booking-final.html" style="text-decoration: none; color: black;">BOOKINGS</a></button>
+<button class="but b11" style="margin: 20px;"><a href="../Bookings/bookings.html" style="text-decoration: none; color: black;">SIGN UP</a></button>
+<br><br>
+</div>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+</body>
+</html>

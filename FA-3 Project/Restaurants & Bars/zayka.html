@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ZAYKA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+<style>
+table#table1 {
+    width:70%; 
+    margin-left:2%; 
+    margin-right:28%;
+  }
+	#header{
+		background-color: black;
+		color:white;
+		height:100px;
+		text-align: center;
+		position:absolute;
+		top:0px;
+		width:100%;
+	}
+	#photos{
+		position: absolute;
+		top:100px;
+		background-color: white;
+		color: white;
+		width:30%;
+		height:1300px;
+		text-align: center;
+	}
+	#info{
+		position: absolute;
+		top:100px;
+		background-color: white;
+		margin-left: 30%;
+		width:69%;
+		text-align: center;
+		height:400px;
+	}
+	table {
+		height:10%;
+		text-align: left;
+	}
+	#menu{
+		position: absolute;
+		top:500px;
+		height:900px;
+		width:69%;
+		background-color: black;
+		margin-left: 30%;
+		text-align: center;
+		color: white;
+	}
+	#vl{
+		position: absolute;
+		top:170px;
+		border-left: 2px solid white;
+		margin-left: -3px;
+		height: 600px;
+		left:50%;
+	}
+	#menu_left{
+		position: absolute;
+		top:100px;
+		left:5%;
+		text-align: left;
+	}
+	#menu_right{
+		position: absolute;
+		top:100px;
+		left: 50%;
+		text-align: left;
+	}
+	#heading {
+		letter-spacing: 2px;
+	}
+	#sub {
+		font-family: 'Raleway', sans-serif;
+		letter-spacing: 6px;
+	}
+	.header {
+  padding: 10px 16px;
+  background: black;
+  color: black;
+  z-index: 11;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+#logo {
+  background-color: black;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 350px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 13;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+
+		<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../Index/project-index.html">Overview</a>
+  <a href="../Accommodation/acc-index.html">Accommodations</a>
+  <a href="../Pool/pool.html">Activities</a>
+  <a href="../Restaurants & Bars/index-res.html">Restaurants & Bar</a>
+  <a href="../Spa/spa.html">Spa</a>
+  <a href="../Club/club.html">The Club</a>
+  <a href="../Bookings/booking-final.html">Bookings</a>
+</div>
+
+
+  <div class="header" id="myHeader">
+  <button class="openbtn" onclick="openNav()" id="logo"><img src="https://pbs.twimg.com/profile_images/750426268521205760/oaVecibt_400x400.jpg" width="55 px" height="50 px"></button>
+  <!--<h1 style="text-align: center; color: white; width: 500px;">ZAYKA</h1>-->
+</div>
+
+
+
+		<div id="photos">
+			    <table id="table1" cellpadding="40px">
+	<!---Image Gallery--->
+	
+    <tr>  
+<td ><img src ="zayka1.jpg" alt="" height=250 width=355></td>	      <!---ZAYKA1--->
+        
+    </tr>
+	<td><img src="zayka2.png" alt=""  height=250 width=350></img></td> <!---ZAYKA2--->
+    <tr>
+        <td ><img src ="zayka3.jpg" alt="" height=250 width=355></td>  <!---ZAYKA3--->
+    </tr>
+	
+    <tr>
+        <td><img src ="zayka4.jpg" alt="" height=250 width=350></td>   <!---ZAYKA4-->  
+    </tr>
+  
+   
+</table>
+		</div>
+
+
+		<div id="info">
+			<h1 id="sub">ZAYKA</h1>
+			<hr width="7%">
+			<table cellspacing="20" width="90%">
+				<tr><td><div id="heading"><i class="fas fa-layer-group"></i>&nbsp;&nbsp;&nbsp;&nbsp;WHERE ARE WE?</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;62nd floor</td>
+					<td><div id="heading"><i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;&nbsp;TIMINGS</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11 a.m. to 11 p.m.</td>
+				</tr>
+				<tr><td><div id="heading"><i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp;SEATING ARRANGEMENTS</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upto 10 seats can be arranged at a time</td>
+					<td><div id="heading"><i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;&nbsp;VIEW</div>
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;City skyline and Mahalaxmi Racecourse</td>
+				</tr>
+				<tr><td><div id="heading"><i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp;&nbsp;SPECIALITIES</div>
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;International dishes with a Mediterranean twist provide a menu<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for all occasions, including business meetings and social gatherings,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in our lofty, sun-filled dining room.</td>
+					<td><div id="heading"><i class="far fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;RATINGS</div>
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> &nbsp;&nbsp;4.76</td>
+				</tr>
+			</table>
+		</div>
+
+
+
+		<div id="menu">
+			<h1 id="sub">MENU</h1>
+			<hr width="4%">
+			<div id="menu_left">
+				<ol>
+					<li><div id="heading">GRILLED CHICKEN BREAST</div><br><p id="cont">With sautéed greens and garlic mash<br>INR 1550</p></li>
+					<li><div id="heading">NORWEGIAN SALMON</div><br><p id="cont">Pan-fried, lentil and asparagus, grilled artichoke, celeriac mash<br>INR 2200</p></li>
+					<li><div id="heading">KUNG PAO CHICKEN</div><br><p id="cont">Stir fry chicken with vegetables, bell peppers and nuts<br>INR 1450</p></li>
+					<li><div id="heading">PHAD THAI</div><br><p id="cont">Stir fried rice noodles<br> PRAWNS INR 1450<br> CHICKEN INR 1450<br> EGG INR 1450 <br> VEGETARIAN INR 1450</p></li>
+					<li><div id="heading">MURGH DUM BIRYANI</div><br><p id="cont">Saffron hued basmati rice layered with chicken and Indian<br> spices cooked on dum<br>INR 1450</p></li>
+					<li><div id="heading">CHARCOAL SMOKED SPICED INDIAN</div><br><p id="cont">Mixed seeds & brown basmati rice pilaf, red onion, raw mango<br> salad with mint & garlic yoghurt (gluten free)<br>TANDOORI CHICKEN TIKKA INR 1450<br>TANDOORI PANEER TIKKA INR 1050</p></li>
+				</ol>
+			</div>
+
+
+			<div id="vl">
+			</div>
+
+
+			<div id="menu_right">
+				<ol start="7">
+					<li><div id="heading">MEDITERRANEAN ON MY MIND</div><br><p id="cont">Grilled chicken souvlaki, hummus, whole-wheat pita crisps<br> & zatar spiced tossed veggies<br>INR 1450</p><br></li>
+					<li><div id="heading">CHEF LIN'S ASIAN RICE BOWL</div><br><p id="cont">Quinoa and brown fried rice (gluten-free, lactose-free)<br>GINGER AND SOY CHICKEN INR 1450<br>ASIAN-GREENS, TOFU, BLACK-BEAN SAUCE INR 1050</p></li>
+					<li><div id="heading">THAI IN A BOWL</div><br><p id="cont">Pickled cucumber, glass noodles and peanut dressing (gluten free,<br> lactose free)<br>POACHED LEMONGRASS CHICKEN INR 1450<br>STEAMED LEMONGRASS VEGETABLES INR 1050</p></li>
+					<li><div id="heading">BAKED NEW YORK CHEESECAKE</div><br><p id="cont">Baked Philadelphia cheese and berry cake<br>INR 725</p></li>
+					<li><div id="heading">COFFEE ORANGE PANNA COTTA</div><p id="cont">Italian dessert made with aromatized cream, coffee and orange<br>INR 725</p></li>
+					<li><div id="heading">TIRAMISU</div><p id="cont">A traditional Italian dessert with mascarpone cheese and coffee<br> liqueur. (contains alcohol)<br>INR 725</p></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+</body>
+</html>

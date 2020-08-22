@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<style>
+			body {
+				background-color: black;
+			}
+		#header{
+		background-color: black;
+		color:white;
+		height:100px;
+		text-align: center;
+		position:absolute;
+		top:0px;
+		width:100%;
+	}
+	#heading {
+		letter-spacing: 2px;
+	}
+	#sub {
+		font-family: 'Raleway', sans-serif;
+		letter-spacing: 6px;
+	}
+	.header {
+  padding: 10px 16px;
+  background: black;
+  color: black;
+  z-index: 11;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+#logo {
+  background-color: black;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 400px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 13;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+#main {
+	color: white;
+	text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px whitesmoke;
+}
+#p1 {
+  color: white;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 8px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div id="container">
+	<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../Index/project-index.html">Overview</a>
+  <a href="../Accommodation/acc-index.html">Accommodations</a>
+  <a href="../Pool/pool.html">Activities</a>
+  <a href="../Restaurants & Bars/index-res.html">Restaurants & Bar</a>
+  <a href="../Spa/spa.html">Spa</a>
+  <a href="../Club/club.html">The Club</a>
+  <a href="../Bookings/booking-final.html">Bookings</a>
+	</div>
+	<div class="header" id="myHeader">
+  <button class="openbtn" onclick="openNav()" id="logo"><img src="https://pbs.twimg.com/profile_images/750426268521205760/oaVecibt_400x400.jpg" width="55 px" height="50 px"></button>
+</div>
+</div>
+<div id="main">
+	<h2>US, BY YOU</h2>
+  <p id="p1">IMAGE GALLERY</p>
+</div>
+<div class="row">
+  <div class="column">
+    <img src="fs13.jpg" style="width: 100%;">
+    <img src="fs2.jpg" style="width: 100%;">
+    <img src="fs3.jpg" style="width: 100%;">
+    <img src="fs4.jpg" style="width: 100%;">
+    <img src="fs5.png" style="width: 100%;">
+    <img src="fs28.jpg" style="width: 100%;">
+    <img src="fs27.jpg" style="width: 100%;">
+  </div>
+  <div class="column">
+    <img src="fs8.jpg" style="width: 100%;">
+    <img src="fs9.jpg" style="width: 100%;">
+    <img src="fs10.jpg" style="width: 100%;">
+    <img src="fs11.jpg" style="width: 100%;">
+    <img src="fs12.jpg" style="width: 100%;">
+    
+  </div>
+  <div class="column">
+    <img src="fs14.jpg" style="width: 100%;">
+    <img src="fs15.jpg" style="width: 100%;">
+    <img src="fs16.jpg" style="width: 100%;">
+    <img src="fs17.jpg" style="width: 100%;">
+    <img src="fs18.jpg" style="width: 100%;">
+    <img src="fs19.jpg" style="width: 100%;">
+    
+  </div>
+  <div class="column">
+    <img src="fs21.jpg" style="width: 100%;">
+    <img src="fs22.jpg" style="width: 100%;">
+    <img src="fs23.jpg" style="width: 100%;">
+    <img src="fs24.jpg" style="width: 100%;">
+    <img src="fs25.jpg" style="width: 100%;">
+    
+    <img src="fs20.jpg" style="width: 100%;">
+  </div>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+</body>
+</html>

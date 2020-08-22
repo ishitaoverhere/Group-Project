@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body {
+			background-image: url('bg-checkrates-2.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		#maindiv {
+			background: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			top: 170px;
+			left: 310px;
+			width: 60%;
+			height: 400px;
+			border: 1px solid black;
+			color: white;
+			text-align: center;
+		}
+		table {
+			margin-top: 0px;
+			position: absolute;
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 0 0em;
+		}
+		input[type=number], input[type=text] {
+			width: 180px;
+			height: 80px;
+			font-size: 30px;
+			background: rgba(0, 0, 0, 0.5);
+			border: 1px solid gray;
+			text-align: center;
+			color: whitesmoke;
+			border-radius: 10px;
+		}
+		input[type=text] {
+			font-size: 20px;
+		}
+		#go {
+			width: 95%;
+			height: 50px;
+			background-color: rgba(0, 0, 0, 0.5);
+			border-width: 2px;
+  			border-image: linear-gradient(to right, black, #C0C0C0);
+ 			border-image-slice: 1;
+ 			color: white;
+ 			font-family: 'Comfortaa', cursive;
+ 			transition: border-color 1s ease;
+		}
+		#go:hover {
+			border-width: 2px;
+  			border-image: linear-gradient(to right, #C0C0C0, black);
+ 			border-image-slice: 1;
+ 			background-color: rgba(0, 0, 0, 0.5);
+		}
+		#demo {
+			color: white;
+			font-family: 'Comfortaa', cursive;
+		}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  color: black;
+  text-align: left;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#myBtn {
+background-color: rgba(0, 0, 0, 0.5);
+color: whitesmoke;
+border: 1px solid grey;
+border-radius: 10px;
+}
+#myBtn:hover {
+background-color: rgba(0, 0, 0, 0.8);
+color: gainsboro;
+}
+#checks {
+font-family: 'Comfortaa', cursive;
+font-size: 25px;
+letter-spacing: 8px;
+}
+#theading {
+font-family: 'Comfortaa', cursive;
+font-size: 12px;
+letter-spacing: 3px;
+}
+
+</style>
+</head>
+<body>
+<div id="maindiv">
+	<p id="checks">CHECK RATES</p>
+	<table>
+		<tr>
+			<th><p id="theading">NO. OF. DAYS</p></th>
+			<th><p id="theading">ADULTS</p></th>
+			<th><p id="theading">CHILDREN</p></th>
+			<th><p id="theading">ROOM</p><button id="myBtn">Click here</button>
+			<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>The format for entering the room type should be as follows:</h3>
+    <p>Enter the Number against the room of your choice:-
+    <ul>
+    <li>Jodha Mahal- 1.</li>
+    <li>Moti Mahal- 2.</li>
+    <li>Noor Mahal- 3.</li>
+    <li>Taj Mahal- 4.</li>
+    </ul>
+    For e.g. If your choice is Moti Mahal, enter 2.</p>
+  </div>
+
+</div></th>
+		</tr>
+		<tr>
+			<td><input type="number" name="rate" id="noofday"></td>
+			<td><input type="number" name="rate" id="noofad"></td>
+			<td><input type="number" name="rate" id="noofch"></td>
+			<td><input type="number" name="rate" id="roomno" placeholder="">
+				<!-- <datalist id="listt">
+					<option value="Jodha Mahal" data-id="1"></option>
+					<option value="Moti Mahal" data-id="2"></option>
+					<option value="Noor Mahal" data-id="3"></option>
+					<option value="Taj Mahal" data-id="4"></option>
+				</datalist></td> -->
+		</tr>
+		<tr>
+			<td colspan="4"><br><br><button id="go" onclick="checkRates()">GO!</button></td>
+		</tr>
+		<tr>
+			<td colspan="4"><br><p id="demo"></p></td>
+		</tr>
+	</table>
+</div>
+<!--<h1 id="demo"></h1>-->
+
+
+<script>
+	function checkRates() {
+		// var option1 = document.getElementById("listt").option;
+		// var jodhamahal=9000;
+		// var motimahal=10000;
+		// var noormahal=15000;
+		// var tajmahal=25000;
+		var adult=document.getElementById("noofad").value;
+		var child=document.getElementById("noofch").value;
+		var days=document.getElementById("noofday").value;
+		// var per_rate=(adult*10000)+(chile*6900);
+		// var x=document.getElementById("noofday").value;
+		var room=document.getElementById("roomno").value;
+		var room_prize=0;
+		if(room==1){
+			room_prize=9000;
+		}
+		else if(room==2){
+			room_prize=10000;
+		}
+		else if(room==3){
+			room_prize=15000;
+		}
+		else if(room==4){
+			room_prize=25000;
+		}
+		
+		var adult_cost=room_prize;
+		var child_cost=(room_prize*(0.75));
+		var tot_adult_cost=adult*adult_cost;
+		var tot_child_cost=child*child_cost;
+		var tol=((tot_adult_cost+tot_child_cost)*days);
+		document.getElementById("demo").innerHTML =tol;
+		
+	}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
